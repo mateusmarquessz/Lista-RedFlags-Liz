@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(160deg, #2b0505 0%, #4a0808 45%, #1a0303 100%);
+  color: #fff0f0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.flags-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+  opacity: 0.15;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 800;
+  color: #ff3b3b;
+  text-shadow: 0 0 12px rgba(255, 59, 59, 0.6), 3px 3px 0 #000;
+  letter-spacing: 1px;
+  animation: wave 2.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: #ffb3b3;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.meter-section {
+  background: rgba(0, 0, 0, 0.35);
+  border: 2px solid #ff3b3b;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-bottom: 28px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.25);
+}
+
+.meter-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.meter-bar {
+  width: 100%;
+  height: 22px;
+  background: #1a0303;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.meter-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ffd93d, #ff8a3d, #ff3b3b);
+  border-radius: 12px;
+  transition: width 0.6s ease;
+}
+
+.meter-status {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffe08a;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 6px solid #ff3b3b;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: pop 0.4s ease;
+  backdrop-filter: blur(2px);
+}
+
+.card .flag-emoji {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+@keyframes pop {
+  from { transform: scale(0.85) translateY(8px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.card.heavy {
+  border-left-color: #b026ff;
+  background: rgba(176, 38, 255, 0.1);
+  box-shadow: 0 0 14px rgba(176, 38, 255, 0.35);
+}
+
+.toxic-banner {
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #ffd93d;
+  background: rgba(176, 38, 255, 0.18);
+  border: 2px dashed #b026ff;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 4px 0;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.empty-state {
+  text-align: center;
+  color: #ffb3b3;
+  font-style: italic;
+  padding: 20px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#addFlagBtn {
+  background: linear-gradient(90deg, #ff3b3b, #ff8a3d);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(255, 59, 59, 0.4);
+}
+
+#addFlagBtn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(255, 59, 59, 0.55);
+}
+
+#addFlagBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff0f0;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.footer {
+  text-align: center;
+  color: #ffb3b3;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.floating-flag {
+  position: fixed;
+  top: -50px;
+  font-size: 2rem;
+  animation: fall linear forwards;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
