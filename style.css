@@ -217,6 +217,33 @@ button {
   opacity: 0.8;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 14px 40px;
+  }
+
+  .header h1 {
+    letter-spacing: 0.5px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .card {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .meter-section {
+    padding: 14px 16px;
+  }
+}
+
 .floating-flag {
   position: fixed;
   top: -50px;
