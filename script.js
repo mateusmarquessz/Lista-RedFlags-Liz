@@ -1,28 +1,9 @@
 const RED_FLAGS = [
   "Deixa no visto por 3 dias e finge que o WhatsApp bugou",
-  "Manda áudio de 5 minutos só pra dizer 'oi, tudo bem?'",
-  "Acha que série dublada é superior e defende isso com unhas e dentes",
   "Come metade da sua sobremesa dizendo 'eu não ia comer doce hoje'",
   "Diz 'já to indo' quando ainda nem tirou o pijama",
-  "Dorme no meio do filme e depois jura que viu tudo",
-  "Muda de música no meio da sua favorita sem avisar",
   "Nunca decide onde vai comer, mas reclama de toda sugestão",
-  "Da 'kkkk' seco quando a piada é boa de verdade",
-  "Chama qualquer doce de chocolate de 'brigadeiro de pote'",
-  "Ri antes de contar a piada e estraga o final",
-  "Assiste todo mundo, não spoila, mas fica soltando pista o dia inteiro",
-  "Diz que 'tá quase chegando' quando ainda nem saiu de casa",
-  "Curte post de 8 meses atrás no Instagram sem querer",
-  "Tem uma opinião forte sobre abacaxi na pizza (pra qualquer lado)",
-  "Manda foto de comida antes de comer, sempre, sem exceção",
-  "Some no meio da conversa e volta com 'foco no trampo'",
-  "Finge que não decorou sua ordem no delivery, mas decorou",
-  "Chama qualquer atraso de 'só um probleminha no trânsito'",
-  "Grava story de tudo, inclusive do prato de comida dos outros",
-  "Fala 'depois eu te conto' e nunca mais conta",
-  "Insiste que sabe cantar, mesmo com provas em contrário",
   "Reage com '😐' em mensagens que mereciam parágrafo",
-  "Sempre 'só mais 5 minutinhos' que viram 40",
 ];
 
 const HEAVY_FLAGS = [
